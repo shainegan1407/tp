@@ -16,7 +16,48 @@ import seedu.address.commons.core.LogsCenter;
 public class HelpWindow extends UiPart<Stage> {
 
     public static final String USERGUIDE_URL = "https://se-education.org/addressbook-level3/UserGuide.html";
-    public static final String HELP_MESSAGE = "Refer to the user guide: " + USERGUIDE_URL;
+    public static final String HELP_MESSAGE =
+            "COMMAND SUMMARY\n"
+                    + "----------------------------------\n\n"
+                    + "addc - Add a contact\n"
+                    + "  Format : addc n/NAME p/PHONE e/EMAIL a/ADDRESS [t/TAG]...\n"
+                    + "  Example: addc n/John Doe p/98765432 e/john@email.com a/123 Street t/Client\n\n"
+                    + "addi - Add an itinerary\n"
+                    + "  Format : addi n/NAME d/DESTINATION sd/START_DATE ed/END_DATE [cid/UUID] [vid/UUID]\n"
+                    + "  Example: addi n/5D4N France Getaway d/France sd/2026-06-10 ed/2026-06-14\n\n"
+                    + "list - List entries by category\n"
+                    + "  Format : list FLAG\n"
+                    + "  FLAG   : /contact, /itinerary, /client, /vendor\n"
+                    + "  Example: list /contact\n\n"
+                    + "edit - Edit a contact\n"
+                    + "  Format : edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]...\n"
+                    + "  Example: edit 1 p/91234567 e/new@email.com\n\n"
+                    + "find - Find contacts by name\n"
+                    + "  Format : find KEYWORD [MORE_KEYWORDS]\n"
+                    + "  Example: find Alex David\n\n"
+                    + "delete - Delete an entry\n"
+                    + "  Format : delete INDEX\n"
+                    + "  Example: delete 3\n\n"
+                    + "clear  - Clear all entries\n"
+                    + "  Format : clear\n\n"
+                    + "exit   - Exit the application\n"
+                    + "  Format : exit\n\n"
+                    + "help   - Show this help window\n"
+                    + "  Format : help\n"
+                    + "----------------------------------\n\n"
+                    + "NOTES\n"
+                    + "- Words in UPPER_CASE are parameters to be supplied by the user.\n"
+                    + "- Items in square brackets are optional.\n"
+                    + "- Items with ... after them can be used multiple times including zero times.\n"
+                    + "- Parameters can be in any order.\n"
+                    + "- Extraneous parameters for commands that do not take in parameters\n"
+                    + " (such as help, exit and clear) will be ignored.\n"
+                    + "----------------------------------\n\n"
+                    + "FOR MORE INFORMATION:\n"
+                    + "Refer to the user guide: "
+                    + USERGUIDE_URL
+                    + "\n"
+                    + "----------------------------------\n\n";
 
     private static final Logger logger = LogsCenter.getLogger(HelpWindow.class);
     private static final String FXML = "HelpWindow.fxml";
